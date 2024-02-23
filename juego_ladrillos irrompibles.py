@@ -46,9 +46,9 @@ while jugar: #esto hara que mientras jugar sea true este en funcionamiento
     
     #Comprobacion del pulsamiento de una tecla para su movimiento
     keys = pygame.key.get_pressed()
-    if keys[pygame.K_LEFT]:#movimiento para la izquierda y cuanto se mueve
+    if keys[pygame.K_LEFT] and barrarect.left > 0:#movimiento para la izquierda y cuanto se mueve ademas compruebe que no salga de la pantalla
         barrarect = barrarect.move(-4,0)
-    if keys [pygame.K_RIGHT]:#movimiento para la derecha y cuanto se mueve
+    if keys [pygame.K_RIGHT] and barrarect.right < window.get_width():#movimiento para la derecha y cuanto se mueve ademas comprueba que no salga de la pantallaZ
         barrarect = barrarect.move(4,0)
     
     #Colisiones pelota-ladrillos
